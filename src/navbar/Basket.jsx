@@ -31,64 +31,84 @@ export default function Basket() {
       ) : (
         <div style={{ textAlign: "left" }}>
           {cartItems.map((item) => (
-            <div 
-              key={item.id} 
-              style={{ 
-                display: "flex", 
-                justifyContent: "space-between", 
+            <div
+              key={item.id || index}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: "15px",
                 borderBottom: "1px solid #eee",
-                paddingBottom: "10px"
+                paddingBottom: "10px",
               }}
             >
               <div>
-                <div style={{ fontWeight: "bold", color: "#2d2d2d", fontSize: "14px" }}>
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    color: "#2d2d2d",
+                    fontSize: "14px",
+                  }}
+                >
                   {item.name}
                 </div>
-                <div style={{ color: "#ff385c", fontSize: "13px", marginTop: "4px" }}>
+                <div
+                  style={{
+                    color: "#ff385c",
+                    fontSize: "13px",
+                    marginTop: "4px",
+                  }}
+                >
                   {(item.price * item.quantity).toFixed(2)} TL
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <button 
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <button
                   onClick={() => removeFromCart(item.id)}
                   style={{
-                    width: "24px", 
-                    height: "24px", 
-                    borderRadius: "50%", 
-                    border: "1px solid #ddd", 
-                    backgroundColor: "#fff", 
+                    width: "24px",
+                    height: "24px",
+                    borderRadius: "50%",
+                    border: "1px solid #ddd",
+                    backgroundColor: "#fff",
                     color: "#2d2d2d",
                     cursor: "pointer",
-                    display: "flex", 
-                    justifyContent: "center", 
-                    alignItems: "center", 
-                    padding: 0, 
-                    lineHeight: 1
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: 0,
+                    lineHeight: 1,
                   }}
                 >
                   -
                 </button>
                 {/* 💡 تم إضافة color: "#2d2d2d" هنا لمنع اختفاء الرقم عند الهوفر */}
-                <span style={{ fontWeight: "bold", fontSize: "14px", color: "#2d2d2d" }}>
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    color: "#2d2d2d",
+                  }}
+                >
                   {item.quantity}
                 </span>
-                <button 
+                <button
                   onClick={() => addToCart(item, item.restaurantId)}
                   style={{
-                    width: "24px", 
-                    height: "24px", 
-                    borderRadius: "50%", 
-                    border: "1px solid #ff385c", 
-                    backgroundColor: "#ff385c", 
-                    color: "#fff", 
+                    width: "24px",
+                    height: "24px",
+                    borderRadius: "50%",
+                    border: "1px solid #ff385c",
+                    backgroundColor: "#ff385c",
+                    color: "#fff",
                     cursor: "pointer",
-                    display: "flex", 
-                    justifyContent: "center", 
-                    alignItems: "center", 
-                    padding: 0, 
-                    lineHeight: 1
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: 0,
+                    lineHeight: 1,
                   }}
                 >
                   +
@@ -96,28 +116,32 @@ export default function Basket() {
               </div>
             </div>
           ))}
-          <div style={{ 
-            display: "flex", 
-            justifyContent: "space-between", 
-            marginTop: "20px", 
-            fontSize: "16px", 
-            fontWeight: "bold",
-            color: "#2d2d2d" 
-          }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "20px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#2d2d2d",
+            }}
+          >
             <span>Toplam:</span>
             <span>{cartTotal ? cartTotal.toFixed(2) : "0.00"} TL</span>
           </div>
-          <button style={{
-            width: "100%",
-            padding: "12px",
-            backgroundColor: "#ff385c",
-            color: "#fff",
-            border: "none",
-            borderRadius: "8px",
-            marginTop: "15px",
-            fontWeight: "bold",
-            cursor: "pointer"
-          }}>
+          <button
+            style={{
+              width: "100%",
+              padding: "12px",
+              backgroundColor: "#ff385c",
+              color: "#fff",
+              border: "none",
+              borderRadius: "8px",
+              marginTop: "15px",
+              fontWeight: "bold",
+              cursor: "pointer",
+            }}
+          >
             Sepeti Onayla
           </button>
         </div>
