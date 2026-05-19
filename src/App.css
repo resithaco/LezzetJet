@@ -1,0 +1,9 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  
+  /* الحل: تحديد ارتفاع أقصى وتفعيل السكرول */
+  height: calc(100vh - 80px); /* 100vh تعني كامل طول الشاشة ناقص طول النافبار */
+  overflow-y: auto;           /* تفعيل السكرول العمودي عند الحاجة */
+}

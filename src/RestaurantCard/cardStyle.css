@@ -1,0 +1,109 @@
+.restaurant-card {
+  border: none;
+  width: 222px;
+  height: 190px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    6px 6px 12px #bec3c9,
+    -6px -6px 12px #ffffff;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.restaurant-card-image {
+  width: 100%;
+  height: 55%;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+.restaurant-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.restaurant-card:hover .restaurant-card-image img {
+  transform: scale(1.06);
+}
+.restaurant-card-info {
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.card-info-header {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant-name {
+  margin: 0;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3f3b3b;
+  letter-spacing: -0.5px;
+}
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 700;
+  color: #2d3436;
+}
+.rating-text {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.rating {
+  font-size: 12px;
+}
+.reviews {
+  font-size: 8px;
+}
+.restaurant-details {
+  line-height: 1.1;
+  margin: 0;
+  font-size: 10px;
+  color: #1102029c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.delivery-row {
+  line-height: 1.1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  color: #555;
+}
+.delivery-icon {
+  font-size: 12px;
+}
+.delivery-text {
+  font-weight: 400;
+}
+.promo-text {
+  display: inline-block;
+  line-height: 1.1;
+  margin-bottom: 2px;
+  padding: 3px;
+  background-color: #9ed6b6;
+  font-size: 8px;
+  color: #048641;
+  font-weight: 400;
+  text-align: left;
+  border-radius: 6px;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 175px;
+}

@@ -1,0 +1,114 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Öncü Döner",
+      "category": "doner",
+      "is_free_delivery": true,
+      "rating": 4.8,
+      "reviews_count": 1250,
+      "delivery_time": "30-40 min",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRoU2aEzSstGSjSLkyOmQ92Ra2CgHSkJOsnQ&s",
+      "price_range": "Uygun fiyat aralığı ₺",
+      "min_basket": "Min. sepet tutarı 200TL",
+      "promo_text": "İlk siparişe özel indirim",
+      "discount": "%10 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 101,
+            "name": "Tavuk Döner Dürüm",
+            "price": 120.0,
+            "description": "Özel soslu Hatay usulü tavuk döner dürüm",
+            "image": "https://example.com/images/meal1.jpg"
+          },
+          {
+            "meal_id": 102,
+            "name": "Zurna Dürüm",
+            "price": 150.0,
+            "description": "70 cm bol malzemeli tavuk döner dürüm",
+            "image": "https://example.com/images/meal2.jpg"
+          }
+        ],
+        "drinks": [
+          {
+            "drink_id": 201,
+            "name": "Ayran",
+            "price": 25.0
+          },
+          {
+            "drink_id": 202,
+            "name": "Coca-Cola",
+            "price": 35.0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Adana Kebapçısı",
+      "category": "kebap",
+      "is_free_delivery": false,
+      "delivery_fee": 35.0,
+      "rating": 4.9,
+      "reviews_count": 3100,
+      "delivery_time": "35-45 min",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6AP9JQJTPDVaEVR0fIiM2gzcWysBNFUhlQ&s",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 250TL",
+      "promo_text": "Popüler Menü",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 301,
+            "name": "Adana Kebap",
+            "price": 240.0,
+            "description": "Közlenmiş biber, domates, sumaklı soğan ve lavaş ile",
+            "image": "https://example.com/images/meal3.jpg"
+          },
+          {
+            "meal_id": 302,
+            "name": "Urfa Kebap",
+            "price": 240.0,
+            "description": "Acısız zırh kıyması kebabı, közlenmiş sebzeler ile",
+            "image": "https://example.com/images/meal4.jpg"
+          }
+        ],
+        "drinks": [
+          {
+            "drink_id": 401,
+            "name": "Şalgam Suyu",
+            "price": 30.0
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Baklava Sarayı",
+      "category": "tatli",
+      "is_free_delivery": true,
+      "rating": 4.6,
+      "reviews_count": 720,
+      "delivery_time": "15-25 min",
+      "image": "https://www.hacibozanogullari.com.tr/kuru-baklava-240-23-K.jpg",
+      "price_range": "Lüks fiyat aralığı ₺₺₺",
+      "min_basket": "Min. sepet tutarı 300TL",
+      "promo_text": "Günlük taze tatlılar",
+      "discount": "%15 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 501,
+            "name": "Fıstıklı Baklava (Porsiyon)",
+            "price": 180.0,
+            "description": "4 adet bol fıstıklı Gaziantep baklavası",
+            "image": "https://example.com/images/meal5.jpg"
+          }
+        ],
+        "drinks": []
+      }
+    }
+  ]
+}

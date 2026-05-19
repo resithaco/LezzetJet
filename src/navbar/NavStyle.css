@@ -1,0 +1,120 @@
+.main-navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+.bottom-row-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 40px;
+  gap: 15px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.category-filters {
+  display: flex;
+  gap: 10px;
+}
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px 4px 4px;
+  border-radius: 50px;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.icon-style {
+  color: #ff4757;
+}
+.category-link:hover {
+  background-color: #ff4757;
+  color: #ffffff;
+}
+.category-link:hover .icon-style {
+  color: #ffffff;
+}
+.category-link:hover .icon-container {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.search-wrapper {
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid #e5e7eb;
+}
+.search-input-field {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding-left: 8px;
+  font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+  .top-row-container,
+  .bottom-row-container {
+    padding: 8px 20px;
+  }
+  .bottom-row-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.location-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f3f4f6;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid #e5e7eb;
+  min-width: 120px;
+}
+.location-icon {
+  color: #ff4757;
+  flex-shrink: 0;
+}
+.location-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f3542;
+  white-space: nowrap;
+}

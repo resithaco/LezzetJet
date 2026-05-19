@@ -1,0 +1,76 @@
+.top-row-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px 5%;
+  border-bottom: 1px solid #f3f4f6;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.brand-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ff4757;
+  text-transform: uppercase;
+  margin: 0;
+  flex: 1;
+}
+
+.location-box {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: 1px solid #e5e7eb;
+}
+.location-box:hover {
+  background-color: #e5e7eb;
+}
+.location-icon {
+  color: #ff4757;
+}
+.location-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f3542;
+}
+.user-actions-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: auto;
+}
+.action-item {
+  width: auto;
+  min-width: 32px;
+  padding: 0 10px;
+  gap: 6px;
+  border-radius: 25px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2f3542;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.action-item:hover {
+  background-color: #e5e7eb;
+  color: rgb(36, 31, 31);
+}
+.basket-icon:hover {
+  background-color: #ff4757 !important;
+  color: white;
+}
+.favorites-icon ,.basket-icon, .language-icon{
+    border-radius: 50%;
+}

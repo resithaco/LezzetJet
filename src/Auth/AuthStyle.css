@@ -1,0 +1,156 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.auth-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+.card-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: 560px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-container.flip {
+  transform: rotateY(180deg);
+}
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid #e5e7eb;
+}
+.card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.app-name {
+  margin: 0 0 5px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ff4757;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h2 {
+  margin: 0 0 18px;
+  color: #2f3542;
+  font-size: 20px;
+  font-weight: 700;
+}
+.input-group,
+.select-group {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.input-group input,
+.accountType {
+  width: 100%;
+  padding: 10px 18px;
+  box-sizing: border-box;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 50px;
+  background-color: #f9fafb;
+  outline: none;
+  font-size: 0.9rem;
+  color: #374151;
+  transition: all 0.3s ease;
+}
+.accountType {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+}
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  color: #ff4757;
+  pointer-events: none;
+  font-size: 0.65rem;
+}
+.input-group input:focus,
+.accountType:focus {
+  border-color: #ff4757;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+}
+button {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff4757;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #e84118;
+  transform: translateY(-1px);
+}
+button.secondary {
+  background-color: transparent;
+  color: #ff4757;
+  border: 1.5px solid #ff4757;
+}
+button.secondary:hover {
+  background-color: #ff4757;
+  color: #ffffff;
+}
+a {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #57606f;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff4757;
+}
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

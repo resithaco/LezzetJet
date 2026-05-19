@@ -1,0 +1,53 @@
+.profile-container {
+  position: relative;
+  cursor: pointer;
+}
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: #2f3542;
+}
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  min-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  z-index: 2000;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: #555;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.menu-item:hover {
+  background-color: #f8f9fa;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+.logout {
+  color: #ff4757;
+}
+.arrow-icon {
+  color: #ff4757;
+  transition: transform 0.3s ease;
+}
+.rotate {
+  transform: rotate(180deg);
+}
