@@ -1,7 +1,7 @@
 import React from "react";
-const CustomButton = ({ label, onclick, className = "" }) => {
+const CustomButton = ({ label, onClick, className = "" }) => {
   return (
-    <button onclick={onclick} className={className}>
+    <button onclick={onClick} className={className}>
       {label}
     </button>
   );

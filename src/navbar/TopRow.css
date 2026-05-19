@@ -69,7 +69,7 @@
 }
 .basket-icon:hover {
   background-color: #ff4757 !important;
-  color: white;
+  color: #2d2d2d;
 }
 .favorites-icon ,.basket-icon, .language-icon{
     border-radius: 50%;

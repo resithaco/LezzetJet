@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navbar from "./navbar/Navbar";
 import CategoryMenu from "./CategoryMenu";
-import SearchInput from "./navbar/SearchInput"; // تأكد من استيراده إذا لم يكن داخل Navbar
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import restaurantData from "./data.json";
 import "./Dashboard.css";
@@ -29,9 +28,13 @@ function Dashboard() {
 
     const matchesSearch =
       res.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (res.dishes &&
-        res.dishes.some((dish) =>
-          dish.toLowerCase().includes(searchTerm.toLowerCase()),
+      (res.menu?.meals &&
+        res.menu.meals.some((meal) =>
+          meal.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        )) ||
+      (res.menu?.drinks &&
+        res.menu.drinks.some((drink) =>
+          drink.name.toLowerCase().includes(searchTerm.toLowerCase()),
         ));
 
     return matchesCategory && matchesSearch;
@@ -42,28 +45,34 @@ function Dashboard() {
   };
 
   return (
-    <div>
+    <div className="dashboard-layout">
+      {/* النافبار ثابت في الأعلى دائماً ولا يتأثر */}
       <Navbar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
+      {/* حاوية المحتوى الرئيسي الذي يحتوي على السكرول */}
+      <div className="cards-container">
+        {/* 💡 نقلنا الكاتيجوري إلى هنا ليكون في مقدمة السكرول وبكامل حجمه الطبيعي المريح */}
+        <div className="dashboard-category-section">
+          <CategoryMenu
+            categories={categories}
+            activeCategory={activeCategory}
+            onCategoryClick={handleCategoryClick}
+          />
+        </div>
 
-      <CategoryMenu
-        categories={categories}
-        activeCategory={activeCategory}
-        onCategoryClick={handleCategoryClick}
-      />
-
-      <div className="cards-container" style={{ padding: "20px" }}>
-        {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} data={restaurant} />
-        ))}
+        {/* شبكة عرض كروت المطاعم */}
+        <div className="restaurants-grid">
+          {filteredRestaurants.map((restaurant) => (
+            <RestaurantCard key={restaurant.id} data={restaurant} />
+          ))}
+        </div>
 
         {filteredRestaurants.length === 0 && (
           <div
             style={{
-              height: "20px",
               textAlign: "center",
               width: "100%",
-              padding: "0px 0",
+              padding: "40px 0",
               color: "#666",
             }}
           >

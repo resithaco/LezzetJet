@@ -1,9 +1,26 @@
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fcfcfc;
+}
 .cards-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  padding-bottom: 40px;
+}
+.dashboard-category-section {
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 10px 0;
+}
+.restaurants-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  
-  /* الحل: تحديد ارتفاع أقصى وتفعيل السكرول */
-  height: calc(100vh - 80px); /* 100vh تعني كامل طول الشاشة ناقص طول النافبار */
-  overflow-y: auto;           /* تفعيل السكرول العمودي عند الحاجة */
+  gap: 16px;
+  padding: 0 40px;
 }

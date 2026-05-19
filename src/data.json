@@ -20,27 +20,42 @@
             "name": "Tavuk Döner Dürüm",
             "price": 120.0,
             "description": "Özel soslu Hatay usulü tavuk döner dürüm",
-            "image": "https://example.com/images/meal1.jpg"
+            "image": "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=500"
           },
           {
             "meal_id": 102,
             "name": "Zurna Dürüm",
             "price": 150.0,
             "description": "70 cm bol malzemeli tavuk döner dürüm",
-            "image": "https://example.com/images/meal2.jpg"
+            "image": "https://images.unsplash.com/photo-1561651823-34fed022540e?w=500"
+          },
+          {
+            "meal_id": 103,
+            "name": "G Tombik Ekmek Tavuk Döner",
+            "price": 135.0,
+            "description": "Tombik ekmek arası bol malzemeli tavuk döner, patates kızartması ile",
+            "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=500"
+          },
+          {
+            "meal_id": 104,
+            "name": "Pilav Üstü Tavuk Döner",
+            "price": 180.0,
+            "description": "Tereyağlı pilav üzerinde yaprak tavuk döner, domates ve biber ile",
+            "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500"
+          },
+          {
+            "meal_id": 105,
+            "name": "Porsiyon Patates Kızartması",
+            "price": 60.0,
+            "description": "Çıtır çıtır sıcak patates kızartması",
+            "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500"
           }
         ],
         "drinks": [
-          {
-            "drink_id": 201,
-            "name": "Ayran",
-            "price": 25.0
-          },
-          {
-            "drink_id": 202,
-            "name": "Coca-Cola",
-            "price": 35.0
-          }
+          { "drink_id": 201, "name": "Ayran", "price": 25.0 },
+          { "drink_id": 202, "name": "Coca-Cola", "price": 35.0 },
+          { "drink_id": 203, "name": "Şalgam Suyu", "price": 30.0 },
+          { "drink_id": 204, "name": "Fanta", "price": 35.0 }
         ]
       }
     },
@@ -65,22 +80,42 @@
             "name": "Adana Kebap",
             "price": 240.0,
             "description": "Közlenmiş biber, domates, sumaklı soğan ve lavaş ile",
-            "image": "https://example.com/images/meal3.jpg"
+            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500"
           },
           {
             "meal_id": 302,
             "name": "Urfa Kebap",
             "price": 240.0,
             "description": "Acısız zırh kıyması kebabı, közlenmiş sebzeler ile",
-            "image": "https://example.com/images/meal4.jpg"
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+          },
+          {
+            "meal_id": 303,
+            "name": "Tavuk Şiş",
+            "price": 210.0,
+            "description": "Özel marine edilmiş tavuk göğsü küpleri, közlenmiş biber ve pilav ile",
+            "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500"
+          },
+          {
+            "meal_id": 304,
+            "name": "Çöp Şiş",
+            "price": 260.0,
+            "description": "Köz ateşinde pişmiş lokum gibi dana çöp şiş, sumaklı soğan eşliğinde",
+            "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500"
+          },
+          {
+            "meal_id": 305,
+            "name": "Gavurdağı Salatası",
+            "price": 85.0,
+            "description": "İnce kıyılmış domates, salatalık, bol ceviz ve nar ekşisi ile",
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500"
           }
         ],
         "drinks": [
-          {
-            "drink_id": 401,
-            "name": "Şalgam Suyu",
-            "price": 30.0
-          }
+          { "drink_id": 401, "name": "Şalgam Suyu", "price": 30.0 },
+          { "drink_id": 402, "name": "Ayran", "price": 25.0 },
+          { "drink_id": 403, "name": "Coca-Cola Zero", "price": 35.0 },
+          { "drink_id": 404, "name": "Soda", "price": 15.0 }
         ]
       }
     },
@@ -104,10 +139,921 @@
             "name": "Fıstıklı Baklava (Porsiyon)",
             "price": 180.0,
             "description": "4 adet bol fıstıklı Gaziantep baklavası",
-            "image": "https://example.com/images/meal5.jpg"
+            "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500"
+          },
+          {
+            "meal_id": 503,
+            "name": "Kuru Baklava (250g)",
+            "price": 220.0,
+            "description": "Şerbeti az, dayanma süresi uzun bol fıstıklı kuru baklava",
+            "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=500"
+          },
+          {
+            "meal_id": 504,
+            "name": "Fıstıklı Şöbiyet",
+            "price": 195.0,
+            "description": "Kaymak ve Antep fıstığının muazzam uyumu, taze porsiyon",
+            "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500"
+          },
+          {
+            "meal_id": 505,
+            "name": "Sütlü Nuriye",
+            "price": 160.0,
+            "description": "Sütlü şerbetiyle hafif, fındıklı geleneksel saray tatlısı",
+            "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500"
           }
         ],
-        "drinks": []
+        "drinks": [
+          { "drink_id": 502, "name": "Türk Çayı", "price": 15.0 },
+          { "drink_id": 506, "name": "Süt", "price": 20.0 },
+          { "drink_id": 507, "name": "Türk Kahvesi", "price": 45.0 }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Burger Master",
+      "category": "burger",
+      "is_free_delivery": true,
+      "rating": 4.7,
+      "reviews_count": 1890,
+      "delivery_time": "20-30 min",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 180TL",
+      "promo_text": "Bedava Patates Kombosu",
+      "discount": "25 TL İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 601,
+            "name": "Classic Cheeseburger",
+            "price": 165.0,
+            "description": "150g taze kasap köftesi, cheddar peyniri, marul, turşu ve özel sos",
+            "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500"
+          },
+          {
+            "meal_id": 602,
+            "name": "Smoky BBQ Burger",
+            "price": 185.0,
+            "description": "Barbekü sos, karamelize soğan, çıtır çıtır dana füme et ve cheddar",
+            "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500"
+          },
+          {
+            "meal_id": 605,
+            "name": "Hot Crispy Chicken Burger",
+            "price": 160.0,
+            "description": "Acılı çıtır tavuk fileto, jalapeño biberi, marul ve acı mayonez",
+            "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=500"
+          },
+          {
+            "meal_id": 606,
+            "name": "Mushroom Truffle Burger",
+            "price": 210.0,
+            "description": "Kremalı mantar sote, trüf yağlı mayonez ve eritilmiş İsviçre peyniri",
+            "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500"
+          },
+          {
+            "meal_id": 607,
+            "name": "Çıtır Soğan Halkaları (8'li)",
+            "price": 55.0,
+            "description": "Altın sarısı çıtır çıtır pane soğan halkaları",
+            "image": "https://images.unsplash.com/photo-1639024471283-267a3fc7752f?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 603, "name": "Pepsi", "price": 35.0 },
+          { "drink_id": 604, "name": "Yedigün", "price": 35.0 },
+          { "drink_id": 608, "name": "Lipton Ice Tea Şeftali", "price": 35.0 },
+          { "drink_id": 609, "name": "Meyveli Soda", "price": 20.0 }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Pizza Bella",
+      "category": "pizza",
+      "is_free_delivery": false,
+      "delivery_fee": 25.0,
+      "rating": 4.5,
+      "reviews_count": 940,
+      "delivery_time": "25-35 min",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 220TL",
+      "promo_text": "1 Alana 1 Bedava",
+      "with_discount": "%20 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 701,
+            "name": "Pizza Margherita",
+            "price": 190.0,
+            "description": "Özel domates sosu, mozzarella peyniri, taze fesleğen ve zeytinyağı",
+            "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=500"
+          },
+          {
+            "meal_id": 702,
+            "name": "Pepperoni Pizza",
+            "price": 220.0,
+            "description": "Bol mozzarella peyniri ve enfes dana pepperoni dilimleri ile",
+            "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500"
+          },
+          {
+            "meal_id": 705,
+            "name": "BBQ Tavuklu Pizza",
+            "price": 230.0,
+            "description": "Barbekü soslu tavuk göğsü, mısır, kırmızı soğan ve mantar",
+            "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+          },
+          {
+            "meal_id": 706,
+            "name": "Vegetarian Pizza",
+            "price": 200.0,
+            "description": "Yeşil biber, siyah zeytin, mantar, tatlı mısır ve küp domatesler",
+            "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?w=500"
+          },
+          {
+            "meal_id": 707,
+            "name": "Sarımsaklı Ekmek (4 Adet)",
+            "price": 65.0,
+            "description": "Fırınlanmış sarımsaklı ve mozzarella peynirli çıtır ekmek dilimleri",
+            "image": "https://images.unsplash.com/photo-1573145959534-b9a217f7a3ff?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 703, "name": "Fanta", "price": 35.0 },
+          { "drink_id": 704, "name": "Fuse Tea", "price": 35.0 },
+          { "drink_id": 708, "name": "Coca-Cola", "price": 35.0 },
+          { "drink_id": 709, "name": "Ayran", "price": 25.0 }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Gaziantep Lahmacun & Döner",
+      "category": "doner",
+      "is_free_delivery": true,
+      "rating": 4.4,
+      "reviews_count": 510,
+      "delivery_time": "30-40 min",
+      "image": "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=500",
+      "price_range": "Uygun fiyat aralığı ₺",
+      "min_basket": "Min. sepet tutarı 150TL",
+      "promo_text": "Hızlı Servis",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 801,
+            "name": "Et Döner Dürüm",
+            "price": 170.0,
+            "description": "Yaprak et döner, soğan ve domates ile sarılı lezzet",
+            "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=500"
+          },
+          {
+            "meal_id": 803,
+            "name": "Antep Lahmacun",
+            "price": 75.0,
+            "description": "Bol sarımsaklı, kıymalı ve özel baharatlı çıtır çıtır Antep lahmacunu",
+            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500"
+          },
+          {
+            "meal_id": 804,
+            "name": "İskender Kebap (Et Dönerden)",
+            "price": 280.0,
+            "description": "Pide yatağında yaprak et döner, domates sosu ve eritilmiş tereyağı ile",
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+          },
+          {
+            "meal_id": 805,
+            "name": "İçli Köfte (Adet)",
+            "price": 50.0,
+            "description": "Cevizli ve kıymalı el yapımı çıtır kızarmış içli köfte",
+            "image": "https://images.unsplash.com/photo-1547058881-aa0edd92aab3?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 802, "name": "Yayık Ayranı", "price": 30.0 },
+          { "drink_id": 806, "name": "Kola", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Has Kebap Salonu",
+      "category": "kebap",
+      "is_free_delivery": true,
+      "rating": 4.7,
+      "reviews_count": 1100,
+      "delivery_time": "40-50 min",
+      "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 200TL",
+      "promo_text": "Yöresel Mezeler İkram",
+      "discount": "%10 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 901,
+            "name": "Beyti Sarma",
+            "price": 270.0,
+            "description": "Lavaşa sarılı kebap, domates sosu, yoğurt ve eritilmiş tereyağı ile",
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+          },
+          {
+            "meal_id": 903,
+            "name": "Ali Nazik Kebabı",
+            "price": 285.0,
+            "description": "Beğendi yatağında sote edilmiş yumuşak kuzu kuşbaşı etleri",
+            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500"
+          },
+          {
+            "meal_id": 904,
+            "name": "Karışık Kebap Porsiyon",
+            "price": 380.0,
+            "description": "Adana, Tavuk Şiş, Kuzu Şiş ve kanat kombinasyonu, pilav ile",
+            "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500"
+          },
+          {
+            "meal_id": 905,
+            "name": "Mercimek Çorbası",
+            "price": 70.0,
+            "description": "Kruton ekmek ve limon ile servis edilen süzme mercimek çorbası",
+            "image": "https://images.unsplash.com/photo-1547592165-e1d17f57655c?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 902, "name": "Şalgam Suyu", "price": 30.0 },
+          { "drink_id": 906, "name": "Ayran", "price": 25.0 },
+          { "drink_id": 907, "name": "Kola", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Künefe Dünyası",
+      "category": "tatli",
+      "is_free_delivery": false,
+      "delivery_fee": 40.0,
+      "rating": 4.5,
+      "reviews_count": 430,
+      "delivery_time": "20-30 min",
+      "image": "https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 250TL",
+      "promo_text": "Sıcak ve Çıtır Çıtır",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1001,
+            "name": "Hatay Künefesi",
+            "price": 160.0,
+            "description": "Özel künefe peyniri, şerbet ve bol Antep fıstığı kaplaması",
+            "image": "https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?w=500"
+          },
+          {
+            "meal_id": 1003,
+            "name": "Hasır Kadayıf",
+            "price": 185.0,
+            "description": "Tamamen Antep fıstığı ile kaplı çıtır çıtır sıcak kadayıf",
+            "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500"
+          },
+          {
+            "meal_id": 1004,
+            "name": "Katmer",
+            "price": 210.0,
+            "description": "İncecik açılmış hamur arasında bol kaymak, şeker ve Antep fıstığı",
+            "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500"
+          },
+          {
+            "meal_id": 1005,
+            "name": "Kesme Maraş Dondurması",
+            "price": 70.0,
+            "description": "Hakiki keçi sütünden dövme Maraş dondurması dilimi",
+            "image": "https://images.unsplash.com/photo-1501443715940-a53b68750f0e?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1002, "name": "Süt", "price": 20.0 },
+          { "drink_id": 1006, "name": "Sıcak Su / Bitki Çayı", "price": 25.0 },
+          { "drink_id": 1007, "name": "Türk Kahvesi", "price": 45.0 }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "Büyük Burger Fabrikası",
+      "category": "burger",
+      "is_free_delivery": true,
+      "rating": 4.6,
+      "reviews_count": 2150,
+      "delivery_time": "15-25 min",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500",
+      "price_range": "Lüks fiyat aralığı ₺₺₺",
+      "min_basket": "Min. sepet tutarı 250TL",
+      "promo_text": "Dev Boyutlu Menüler",
+      "discount": "50 TL İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1101,
+            "name": "Double Texas Burger",
+            "price": 230.0,
+            "description": "300g et, çifte cheddar, çıtır soğan halkaları ve özel sos",
+            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500"
+          },
+          {
+            "meal_id": 1103,
+            "name": "Mega Avocado Bacon Burger",
+            "price": 250.0,
+            "description": "Taze avokado püresi, çıtır çıtır füme et, gouda peyniri ve dana köfte",
+            "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500"
+          },
+          {
+            "meal_id": 1104,
+            "name": "Cheddar Soslu Kova Patates",
+            "price": 95.0,
+            "description": "Eritilmiş cheddar peyniri ve çıtır pastırma parçacıklı büyük boy patates",
+            "image": "https://images.unsplash.com/photo-1576107232684-1279f390859f?w=500"
+          },
+          {
+            "meal_id": 1105,
+            "name": "Acılı Tavuk Parçaları (10'lu)",
+            "price": 120.0,
+            "description": "Özel baharatlı çıtır kemiksiz tavuk kovası",
+            "image": "https://images.unsplash.com/photo-1562967914-608f82629a7a?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1102, "name": "Sprite", "price": 35.0 },
+          { "drink_id": 1106, "name": "Coca-Cola", "price": 35.0 },
+          { "drink_id": 1107, "name": "Fanta", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Pizza Venezia",
+      "category": "pizza",
+      "is_free_delivery": true,
+      "rating": 4.3,
+      "reviews_count": 810,
+      "delivery_time": "25-35 min",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 200TL",
+      "promo_text": "İtalyan Usulü İnce Kenar",
+      "discount": "%10 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1201,
+            "name": "Dört Peynirli Pizza",
+            "price": 210.0,
+            "description": "Mozzarella, parmesan, gorgonzola ve cheddar uyumu",
+            "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+          },
+          {
+            "meal_id": 1203,
+            "name": "Pizza Al Tonno",
+            "price": 235.0,
+            "description": "Ton balığı, tatlı mısır, siyah zeytin ve kırmızı soğan halkaları",
+            "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500"
+          },
+          {
+            "meal_id": 1204,
+            "name": "Acılı Diabla Pizza",
+            "price": 225.0,
+            "description": "Süper acı İtalyan salamı, jalapeño ve acı yağ ilavesiyle",
+            "image": "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=500"
+          },
+          {
+            "meal_id": 1205,
+            "name": "Akdeniz Pizzası",
+            "price": 195.0,
+            "description": "Beyaz peynir, cherry domates, zeytin, kekik ve roka yaprakları",
+            "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1202, "name": "Cappy Karışık", "price": 35.0 },
+          { "drink_id": 1206, "name": "Kola Zero", "price": 35.0 },
+          { "drink_id": 1207, "name": "Limonata", "price": 40.0 }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "Kral Tavuk Döner",
+      "category": "doner",
+      "is_free_delivery": false,
+      "delivery_fee": 15.0,
+      "rating": 4.2,
+      "reviews_count": 670,
+      "delivery_time": "20-30 min",
+      "image": "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=500",
+      "price_range": "Uygun fiyat aralığı ₺",
+      "min_basket": "Min. sepet tutarı 100TL",
+      "promo_text": "Öğrenci Dostu Menüler",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1301,
+            "name": "Tombik Ekmek Döner",
+            "price": 95.0,
+            "description": "Çıtır tombik ekmek arası tavuk döner, patates ile",
+            "image": "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=500"
+          },
+          {
+            "meal_id": 1303,
+            "name": "Yarım Ekmek Arası Döner",
+            "price": 85.0,
+            "description": "Çıtır taze somun ekmeği arasında soslu tavuk döner",
+            "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500"
+          },
+          {
+            "meal_id": 1304,
+            "name": "Dürüm Menü (Büyük Boy)",
+            "price": 140.0,
+            "description": "Tavuk dürüm, patates kızartması ve seçeceğiniz içecek ile birlikte",
+            "image": "https://images.unsplash.com/photo-1561651823-34fed022540e?w=500"
+          },
+          {
+            "meal_id": 1305,
+            "name": "Tavuk Döner İskender Usulü",
+            "price": 170.0,
+            "description": "Pideli, domates soslu ve tereyağlı nefis tavuk iskender",
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1302, "name": "Ayran", "price": 20.0 },
+          { "drink_id": 1306, "name": "Kola", "price": 35.0 },
+          { "drink_id": 1307, "name": "Niğde Gazozu", "price": 25.0 }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "Ocakbaşı Sarayı",
+      "category": "kebap",
+      "is_free_delivery": true,
+      "rating": 4.8,
+      "reviews_count": 1420,
+      "delivery_time": "35-45 min",
+      "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500",
+      "price_range": "Lüks fiyat aralığı ₺₺₺",
+      "min_basket": "Min. sepet tutarı 300TL",
+      "promo_text": "Gerçek Kömür Ateşi",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1401,
+            "name": "Kuzu Şiş",
+            "price": 290.0,
+            "description": "Marine edilmiş yumuşacık kuzu etleri, bulgur pilavı ile",
+            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500"
+          },
+          {
+            "meal_id": 1403,
+            "name": "Fıstıklı Kebap",
+            "price": 310.0,
+            "description": "İçerisine Antep fıstığı karıştırılmış özel zırh kebabı, köz sebzelerle",
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+          },
+          {
+            "meal_id": 1404,
+            "name": "Sarma Beyti Kuzu",
+            "price": 330.0,
+            "description": "Özel lavaşa sarılı, süzme yoğurtlu ve kızgın tereyağlı gurme beyti",
+            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500"
+          },
+          {
+            "meal_id": 1405,
+            "name": "Lahmacun Klasik",
+            "price": 65.0,
+            "description": "Kıtır kenarlı fındık lahmacundan biraz büyük çıtır klasik lahmacun",
+            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1402, "name": "Şalgam", "price": 30.0 },
+          { "drink_id": 1406, "name": "Büyük Ayran", "price": 30.0 },
+          { "drink_id": 1407, "name": "Kola", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "Sütlü Tatlı Evi",
+      "category": "tatli",
+      "is_free_delivery": true,
+      "rating": 4.7,
+      "reviews_count": 560,
+      "delivery_time": "15-25 min",
+      "image": "https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?w=500",
+      "price_range": "Uygun fiyat aralığı ₺",
+      "min_basket": "Min. sepet tutarı 150TL",
+      "promo_text": "Hafif ve Lezzetli",
+      "discount": "%5 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1501,
+            "name": "Fırın Sütlaç",
+            "price": 85.0,
+            "description": "Üstü nar gibi kızarmış geleneksel fırın sütlaç",
+            "image": "https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?w=500"
+          },
+          {
+            "meal_id": 1503,
+            "name": "Profiterol Porsiyon",
+            "price": 110.0,
+            "description": "Özel kremalı şu topları, yoğun ve akışkan Belçika çikolatalı sos ile",
+            "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500"
+          },
+          {
+            "meal_id": 1504,
+            "name": "Kazandibi",
+            "price": 95.0,
+            "description": "Dibi tam kıvamında yakılmış, nefis sübyeli sütlü saray tatlısı",
+            "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500"
+          },
+          {
+            "meal_id": 1505,
+            "name": "Magnolia Çilekli",
+            "price": 100.0,
+            "description": "Özel krema, taze çilek dilimleri ve çıtır bisküvi kırıntıları",
+            "image": "https://images.unsplash.com/photo-1505575967455-40e256f73376?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1502, "name": "Su", "price": 10.0 },
+          { "drink_id": 1506, "name": "Limonata", "price": 40.0 },
+          { "drink_id": 1507, "name": "Soğuk Kahve Latte", "price": 60.0 }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "Crunchy Chicken Burger",
+      "category": "burger",
+      "is_free_delivery": false,
+      "delivery_fee": 20.0,
+      "rating": 4.4,
+      "reviews_count": 1280,
+      "delivery_time": "20-30 min",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 170TL",
+      "promo_text": "Çıtır Çıtır Tavuk Dünyası",
+      "discount": "%15 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1601,
+            "name": "Crispy Chicken Burger Menü",
+            "price": 150.0,
+            "description": "Özel kaplamalı çıtır tavuk göğsü, marul, mayonez ve patates kızartması",
+            "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500"
+          },
+          {
+            "meal_id": 1603,
+            "name": "Chicken Tenders Box (6 Adet)",
+            "price": 115.0,
+            "description": "Uzun çıtır tavuk parçaları, ballı hardal sosu ile kombine",
+            "image": "https://images.unsplash.com/photo-1562967914-608f82629a7a?w=500"
+          },
+          {
+            "meal_id": 1604,
+            "name": "Buffalo Wings (8 Adet)",
+            "price": 135.0,
+            "description": "Acı Buffalo sosuna bulanmış çıtır çıtır kızarmış tavuk kanatları",
+            "image": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=500"
+          },
+          {
+            "meal_id": 1605,
+            "name": "Soğan Halkalı Patates Sepeti",
+            "price": 80.0,
+            "description": "Karışık çıtır sepet: Patates kızartması ve 5 adet soğan halkası",
+            "image": "https://images.unsplash.com/photo-1639024471283-267a3fc7752f?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1602, "name": "Coca-Cola Zero", "price": 35.0 },
+          { "drink_id": 1606, "name": "Fanta", "price": 35.0 },
+          { "drink_id": 1607, "name": "Ayran", "price": 25.0 }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "Pizza Tomato",
+      "category": "pizza",
+      "is_free_delivery": true,
+      "rating": 4.2,
+      "reviews_count": 620,
+      "delivery_time": "30-40 min",
+      "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500",
+      "price_range": "Uygun fiyat aralığı ₺",
+      "min_basket": "Min. sepet tutarı 190TL",
+      "promo_text": "Ekonomik Boy Pizza",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1701,
+            "name": "Karışık Pizza",
+            "price": 180.0,
+            "description": "Sucuk, salam, sosis, mısır, zeytin, mantar ve biber",
+            "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500"
+          },
+          {
+            "meal_id": 1703,
+            "name": "Barbekü Tavuklu Pizza",
+            "price": 195.0,
+            "description": "Mantar, küp tavuk, mısır ve üzerinde leziz barbekü sosu",
+            "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+          },
+          {
+            "meal_id": 1704,
+            "name": "Bol Etli Pizza",
+            "price": 220.0,
+            "description": "Kıyma kavurması, pepperoni, sucuk ve dana jambon ziyafeti",
+            "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500"
+          },
+          {
+            "meal_id": 1705,
+            "name": "Çıtır Mozzarella Çubukları (5 Adet)",
+            "price": 75.0,
+            "description": "Sıcak ve içi uzayan panelenmiş mozzarella çubukları",
+            "image": "https://images.unsplash.com/photo-1531749668029-2db88e4b76ce?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1702, "name": "Ayran", "price": 25.0 },
+          { "drink_id": 1706, "name": "Sprite", "price": 35.0 },
+          { "drink_id": 1707, "name": "Coca-Cola Orijinal", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "Dönerci Ali Usta",
+      "category": "doner",
+      "is_free_delivery": true,
+      "rating": 4.9,
+      "reviews_count": 4500,
+      "delivery_time": "25-35 min",
+      "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=500",
+      "price_range": "Lüks fiyat aralığı ₺₺₺",
+      "min_basket": "Min. sepet tutarı 250TL",
+      "promo_text": "Efsane Yaprak Döner",
+      "discount": "%10 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1801,
+            "name": "İskender Kebap",
+            "price": 320.0,
+            "description": "Halis tereyağlı, domates soslu, altı pideli yaprak et döner",
+            "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=500"
+          },
+          {
+            "meal_id": 1803,
+            "name": "Porsiyon Yaprak Et Döner (150g)",
+            "price": 290.0,
+            "description": "Lavaş ekmeği, közlenmiş biber ve sumaklı soğan salatası eşliğinde saf et döner",
+            "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500"
+          },
+          {
+            "meal_id": 1804,
+            "name": "Dürüm Et Döner Lüks",
+            "price": 210.0,
+            "description": "Köz ateşinde pişmiş yaprak dönerin ince lavaş ile muazzam buluşması",
+            "image": "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=500"
+          },
+          {
+            "meal_id": 1805,
+            "name": "Gobit Ekmek Arası Et Döner",
+            "price": 195.0,
+            "description": "Yumuşacık gobit ekmeği arasına bol et döner, turşu ile",
+            "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1802, "name": "Şişe Şalgam Suyu", "price": 35.0 },
+          { "drink_id": 1806, "name": "Milli Yayık Ayranı", "price": 35.0 },
+          { "drink_id": 1807, "name": "Kola", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "name": "Gaziantep Baklavaları",
+      "category": "tatli",
+      "is_free_delivery": true,
+      "rating": 4.8,
+      "reviews_count": 1340,
+      "delivery_time": "20-30 min",
+      "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500",
+      "price_range": "Lüks fiyat aralığı ₺₺₺",
+      "min_basket": "Min. sepet tutarı 350TL",
+      "promo_text": "Gaziantep'ten Günlük Sevkiyat",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 1901,
+            "name": "Havuç Dilim Baklava",
+            "price": 200.0,
+            "description": "Sade yağlı taze havuç dilim baklava (Maraş dondurması seçeneğiyle)",
+            "image": "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=500"
+          },
+          {
+            "meal_id": 1903,
+            "name": "Fıstık Sarma Porsiyon",
+            "price": 240.0,
+            "description": "İncecik yufkanın tamamen Antep fıstığı ezmesiyle sarıldığı rüya lezzet",
+            "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=500"
+          },
+          {
+            "meal_id": 1904,
+            "name": "Bülbül Yuvası Tatlısı",
+            "price": 210.0,
+            "description": "Halka şeklinde çıtır kadayıfımsı hamur ortasında bol bütün Antep fıstıkları",
+            "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500"
+          },
+          {
+            "meal_id": 1905,
+            "name": "Soğuk Baklava Fıstıklı",
+            "price": 190.0,
+            "description": "Sütlü şerbetli, üzeri kakao ve çikolata rendeli modern baklava",
+            "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 1902, "name": "Su", "price": 15.0 },
+          { "drink_id": 1906, "name": "Büyük Cam Şişe Süt", "price": 30.0 }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name": "BBQ Burger House",
+      "category": "burger",
+      "is_free_delivery": false,
+      "delivery_fee": 30.0,
+      "rating": 4.5,
+      "reviews_count": 860,
+      "delivery_time": "30-40 min",
+      "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 200TL",
+      "promo_text": "Kömür Kokulu Gurme Lezzetler",
+      "discount": "30 TL İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 2001,
+            "name": "Mushroom Swiss Burger",
+            "price": 195.0,
+            "description": "Sote mantar, eritilmiş gravyer peyniri ve karamelize soğan sosu",
+            "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500"
+          },
+          {
+            "meal_id": 2003,
+            "name": "Jalapeno Fire Burger",
+            "price": 185.0,
+            "description": "Bol jalapeño biberi, acı sriracha sosu ve ekstra çıtır cheddar dilimi",
+            "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=500"
+          },
+          {
+            "meal_id": 2004,
+            "name": "Cheddar Bacon Fries",
+            "price": 110.0,
+            "description": "Sıcak erimiş akışkan cheddar peyniri ve çıtır pastırmalı patates tabağı",
+            "image": "https://images.unsplash.com/photo-1576107232684-1279f390859f?w=500"
+          },
+          {
+            "meal_id": 2005,
+            "name": "Mozzarella Çubukları Kombosu",
+            "price": 90.0,
+            "description": "4 adet çıtır mozzarella çubuğu ve barbekü sosu",
+            "image": "https://images.unsplash.com/photo-1531749668029-2db88e4b76ce?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 2002, "name": "Fuzetea Şeftali", "price": 35.0 },
+          { "drink_id": 2006, "name": "Pepsi Max", "price": 35.0 },
+          { "drink_id": 2007, "name": "Yedigün Portakal", "price": 35.0 }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "name": "Napoli Pizza",
+      "category": "pizza",
+      "is_free_delivery": true,
+      "rating": 4.6,
+      "reviews_count": 1120,
+      "delivery_time": "20-30 min",
+      "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=500",
+      "price_range": "Lüks fiyat aralığı ₺₺₺",
+      "min_basket": "Min. sepet tutarı 240TL",
+      "promo_text": "Taş Fırında Odun Ateşi",
+      "discount": "%15 İndirim",
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 2101,
+            "name": "Pizza Quattro Stagioni",
+            "price": 235.0,
+            "description": "Dört mevsim pizza: Enginar, mantar, jambon ve zeytin ile",
+            "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=500"
+          },
+          {
+            "meal_id": 2103,
+            "name": "Pizza Funghi",
+            "price": 190.0,
+            "description": "Bol fırınlanmış kültür mantarı, kekik, mozzarella ve sarımsaklı zeytinyağı",
+            "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500"
+          },
+          {
+            "meal_id": 2104,
+            "name": "BBQ Dana Füme Pizza",
+            "price": 250.0,
+            "description": "Meşe odununda tütsülenmiş dana füme et dilimleri ve barbekü sosu",
+            "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+          },
+          {
+            "meal_id": 2105,
+            "name": "Calzone (Kapalı Pizza)",
+            "price": 220.0,
+            "description": "İçi bol mozzarella, ricotta peyniri, sucuk ve mantar dolu kapalı İtalyan pizzası",
+            "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 2102, "name": "Coca-Cola", "price": 35.0 },
+          { "drink_id": 2106, "name": "Fanta", "price": 35.0 },
+          { "drink_id": 2107, "name": "Sıkma Portakal Suyu", "price": 50.0 }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "name": "Urfa Sofrası",
+      "category": "kebap",
+      "is_free_delivery": true,
+      "rating": 4.5,
+      "reviews_count": 1980,
+      "delivery_time": "35-45 min",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500",
+      "price_range": "Orta fiyat aralığı ₺₺",
+      "min_basket": "Min. sepet tutarı 200TL",
+      "promo_text": "Sıcak Lavaş İkramı",
+      "discount": null,
+      "menu": {
+        "meals": [
+          {
+            "meal_id": 2201,
+            "name": "Ali Nazik Kebabı",
+            "price": 265.0,
+            "description": "Sarımsaklı süzme yoğurtlu patlıcan yatağında lokum gibi sotelenmiş etler",
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500"
+          },
+          {
+            "meal_id": 2203,
+            "name": "Urfa Kebabı Klasik",
+            "price": 225.0,
+            "description": "Acısız satır kıyması kebabı, bulgur pilavı ve közlenmiş domates ile",
+            "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500"
+          },
+          {
+            "meal_id": 2204,
+            "name": "Haşhaş Kebabı",
+            "price": 245.0,
+            "description": "Sarımsak ve maydanozla yoğrulmuş Urfa usulü nefis zırh kebabı",
+            "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500"
+          },
+          {
+            "meal_id": 2205,
+            "name": "İçi Bol Çiğ Köfte (Porsiyon)",
+            "price": 80.0,
+            "description": "Etisiz el yapımı 8 adet çiğ köfte; yeşillik, limon ve nar ekşisi ile",
+            "image": "https://images.unsplash.com/photo-1547058881-aa0edd92aab3?w=500"
+          }
+        ],
+        "drinks": [
+          { "drink_id": 2202, "name": "Büyük Ayran", "price": 35.0 },
+          { "drink_id": 2206, "name": "Şalgam Suyu Acılı", "price": 30.0 },
+          { "drink_id": 2207, "name": "Kola", "price": 35.0 }
+        ]
       }
     }
   ]

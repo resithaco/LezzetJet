@@ -30,7 +30,7 @@ export default function Basket() {
         </>
       ) : (
         <div style={{ textAlign: "left" }}>
-          {cartItems.map((item) => (
+          {cartItems.map((item,index) => (
             <div
               key={item.id || index}
               style={{
@@ -89,7 +89,7 @@ export default function Basket() {
                   style={{
                     fontWeight: "bold",
                     fontSize: "14px",
-                    color: "#2d2d2d",
+                
                   }}
                 >
                   {item.quantity}
