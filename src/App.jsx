@@ -9,6 +9,7 @@ import Restaurant from "./RestaurantCard/Restaurant";
 import AuthPage from "./Auth/AuthPage";
 import Dashboard from "./Dashboard";
 import FavoritesPage from "./FavoritesPage/FavoritesPage";
+import CreditCardForm from "./payment/CreditCardForm";
 import "./App.css";
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/restaurant/:id" element={<Restaurant />} />
           <Route path="/" element={<AuthPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/payment" element={<CreditCardForm />} />
         </Routes>
       </Router>
     </CartProvider>

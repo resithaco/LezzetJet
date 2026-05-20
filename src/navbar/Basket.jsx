@@ -1,8 +1,10 @@
 import React from "react";
 import { ShoppingBasket } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
 
 export default function Basket() {
+  const navigate = useNavigate();
   // 1. استدعاء جميع المتغيرات والدوال التي استخدمتها في الأسفل
   const { cartItems, removeFromCart, addToCart, cartTotal } = useCart();
 
@@ -30,7 +32,7 @@ export default function Basket() {
         </>
       ) : (
         <div style={{ textAlign: "left" }}>
-          {cartItems.map((item,index) => (
+          {cartItems.map((item, index) => (
             <div
               key={item.id || index}
               style={{
@@ -89,7 +91,6 @@ export default function Basket() {
                   style={{
                     fontWeight: "bold",
                     fontSize: "14px",
-                
                   }}
                 >
                   {item.quantity}
@@ -130,6 +131,7 @@ export default function Basket() {
             <span>{cartTotal ? cartTotal.toFixed(2) : "0.00"} TL</span>
           </div>
           <button
+            onClick={() => navigate("/payment")}
             style={{
               width: "100%",
               padding: "12px",

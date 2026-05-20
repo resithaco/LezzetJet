@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="frontBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2196F3" />
+      <stop offset="40%" stop-color="#00BCD4" />
+      <stop offset="70%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#8BC34A" />
+    </linearGradient>
+    
+    <linearGradient id="backBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4FC3F7" />
+      <stop offset="100%" stop-color="#0288D1" />
+    </linearGradient>
+
+    <linearGradient id="chipBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0A96D" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(20, 20)">
+    <rect width="500" height="315" rx="20" ry="20" fill="url(#frontBg)" stroke="#dcdcdc" stroke-width="1" filter="drop-shadow(2px 4px 6px rgba(0,0,0,0.15))"/>
+    
+    <path d="M 430 30 L 445 45 L 435 50 Z" fill="#E65100"/> 
+    <text x="340" y="45" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#1A237E">VakıfBank</text>
+    
+    <rect x="40" y="80" width="65" height="50" rx="8" ry="8" fill="url(#chipBg)" stroke="#9a731c" stroke-width="1"/>
+    <line x1="40" y1="105" x2="105" y2="105" stroke="#9a731c" stroke-width="1"/>
+    <line x1="72" y1="80" x2="72" y2="130" stroke="#9a731c" stroke-width="1"/>
+    <rect x="52" y="90" width="41" height="30" rx="3" fill="none" stroke="#9a731c" stroke-width="1"/>
+
+    <g transform="translate(120, 95)" stroke="#1A237E" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M0,0 A15,15 0 0,1 0,20" />
+      <path d="M5,-3 A20,20 0 0,1 5,23" stroke-width="3"/>
+      <path d="M10,-6 A25,25 0 0,1 10,26" stroke-width="3"/>
+    </g>
+
+    <text id="card-number" x="40" y="180" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="22" fill="#1A237E" letter-spacing="3">•••• •••• •••• ••••</text>
+    
+    <text id="card-expiry" x="180" y="215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A237E">MM / YY</text>
+
+    <text id="card-holder" x="40" y="260" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#1A237E" letter-spacing="1">NAME SURNAME</text>
+
+    <text x="40" y="300" font-family="'Impact', sans-serif" font-style="italic" font-size="32" fill="#0A2540">VISA</text>
+
+    <text x="350" y="260" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#1B5E20">Bankomat</text>
+    <text x="380" y="285" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#B71C1C">Genç</text>
+  </g>
+
+  <g transform="translate(560, 20)">
+    <rect width="500" height="315" rx="20" ry="20" fill="url(#backBg)" stroke="#dcdcdc" stroke-width="1" filter="drop-shadow(2px 4px 6px rgba(0,0,0,0.15))"/>
+    
+    <rect x="0" y="30" width="500" height="45" fill="#212121"/>
+
+    <rect x="0" y="90" width="360" height="30" fill="#E0E0E0"/>
+    <text x="10" y="110" font-family="Arial, sans-serif" font-size="11" fill="#37474F">www.vakifkart.com.tr | 444 0 724</text>
+
+    <text x="250" y="150" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">SECURITY CODE</text>
+    <rect x="245" y="155" width="55" height="30" fill="#FFFFFF"/>
+    <text id="card-cvv" x="255" y="176" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="16" fill="#212121">•••</text>
+
+    <g transform="translate(40, 200)">
+      <rect width="70" height="70" fill="#FFFFFF" rx="4"/>
+      <rect x="5" y="5" width="20" height="20" fill="#212121"/>
+      <rect x="45" y="5" width="20" height="20" fill="#212121"/>
+      <rect x="5" y="45" width="20" height="20" fill="#212121"/>
+      <rect x="10" y="10" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="50" y="10" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="10" y="50" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="30" y="30" width="15" height="15" fill="#212121"/>
+      <rect x="50" y="50" width="10" height="10" fill="#212121"/>
+    </g>
+
+    <text x="130" y="210" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" opacity="0.9">
+      <tspan x="130" dy="0">• Başkasına devredilemez. | Non transferable.</tspan>
+      <tspan x="130" dy="12">• Bu kartın mülkiyeti T. VAKIFLAR BANKASI T.A.O.'ya aittir ve</tspan>
+      <tspan x="130" dy="12">istenildiğinde iade edilmesi zorunludur. | This card is</tspan>
+      <tspan x="130" dy="12">the property of T. VAKIFLAR BANKASI T.A.O.</tspan>
+    </text>
+  </g>
+</svg>
