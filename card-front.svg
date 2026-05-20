@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 856 540" width="100%" height="100%" style="border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); background-color: #FFFFFF;">
+  <defs>
+    <style>
+      .card-num { font-family: 'Courier New', Courier, monospace; font-size: 46px; font-weight: bold; letter-spacing: 4px; fill: #111; }
+      .card-text { font-family: Arial, sans-serif; fill: #111; }
+      .visa { font-family: Arial, sans-serif; font-size: 60px; font-weight: 900; font-style: italic; fill: #1434CB; }
+    </style>
+  </defs>
+
+  <polygon points="0,0 650,0 0,450" fill="#00AEEF" />
+  <polygon points="856,540 200,540 856,90" fill="#8CC63F" />
+  
+  <polygon points="0,380 180,540 0,540" fill="#008CA8" />
+
+  <g transform="translate(620, 40)">
+    <rect x="0" y="0" width="45" height="45" rx="10" fill="#F05023" transform="rotate(15 22 22)" />
+    <path d="M10 15 L22 35 L34 15 L28 15 L22 28 L16 15 Z" fill="#FFFFFF" />
+    <text x="55" y="32" class="card-text" font-size="32" font-weight="bold">VakıfBank</text>
+  </g>
+
+  <g transform="translate(60, 160)">
+    <rect width="80" height="60" rx="8" fill="#FFD700" stroke="#B8860B" stroke-width="2" />
+    <path d="M 25 0 L 25 60 M 55 0 L 55 60 M 0 30 L 80 30 M 25 15 L 0 15 M 25 45 L 0 45 M 55 15 L 80 15 M 55 45 L 80 45" stroke="#B8860B" stroke-width="1.5" fill="none" />
+  </g>
+
+  <g transform="translate(170, 175)" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round">
+    <path d="M 0 10 A 15 15 0 0 1 0 30" />
+    <path d="M 10 5 A 25 25 0 0 1 10 35" />
+    <path d="M 20 0 A 35 35 0 0 1 20 40" />
+    <path d="M 30 -5 A 45 45 0 0 1 30 45" />
+  </g>
+
+  <g transform="translate(300, 155)">
+    <circle cx="0" cy="25" r="30" fill="#E0F7FA" stroke="#00AEEF" stroke-width="4" />
+    <path d="M-12 15 L12 15 L10 30 L-10 30 Z" fill="none" stroke="#00AEEF" stroke-width="2.5" />
+    
+    <circle cx="85" cy="25" r="30" fill="#F3E5F5" stroke="#6B2A5F" stroke-width="4" />
+    <rect x="70" y="15" width="30" height="20" rx="3" fill="none" stroke="#6B2A5F" stroke-width="2.5" />
+    
+    <circle cx="170" cy="25" r="30" fill="#FCE4EC" stroke="#880E4F" stroke-width="4" />
+    <text x="170" y="36" font-family="Arial" font-size="30" font-weight="bold" fill="#880E4F" text-anchor="middle">@</text>
+  </g>
+
+  <text x="60" y="320" class="card-num"></text>
+  
+
+  <text x="400" y="405" class="card-num" font-size="34"></text>
+  
+  <text x="60" y="400" class="card-text" font-size="32" font-weight="bold" letter-spacing="2"></text>
+
+  <text x="60" y="500" class="visa">VISA</text>
+
+  <g transform="translate(480, 480)">
+    <text x="0" y="0" class="card-text" font-size="42" font-weight="bold">Bankomat</text>
+    <text x="215" y="0" class="card-text" font-size="42" font-weight="bold" fill="#880E4F">Genç</text>
+  </g>
+</svg>
