@@ -40,4 +40,12 @@
     margin-left: 220px; /* دفع حاوية الكروت لليمين لترك مساحة مريحة للـ QR على اليسار */
   }
 }
-
+@media (max-width: 768px) {
+  .restaurants-grid .restaurant-card {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+}
