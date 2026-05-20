@@ -1,16 +1,21 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import CardImage from "./CardImage";
 import CardInfo from "./CardInfo";
 
 export default function RestaurantCard({ data }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleCardClick = () => {
     navigate(`/restaurant/${data.id}`, { state: { restaurant: data } });
   };
+
   return (
-    <div className="restaurant-card" onClick={handleCardClick} style={{ cursor: "pointer" }}>
+    <div
+      className="restaurant-card"
+      onClick={handleCardClick}
+      style={{ cursor: "pointer" }}
+    >
       <CardImage
         image={data.image}
         discount={data.discount}
@@ -22,9 +27,7 @@ export default function RestaurantCard({ data }) {
         reviews={`${data.reviews_count}+`}
         priceRange={data.price_range}
         minBasket={data.min_basket}
-        deliveryFee={
-          data.is_free_delivery ? "Ücretsiz" : `${data.delivery_fee}TL`
-        }
+        deliveryFee={data.is_free_delivery ? "Ücretsiz" : `${data.delivery_fee}TL`}
         promoText={data.promo_text}
       />
     </div>

@@ -4,6 +4,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: #fcfcfc;
+  box-sizing: border-box;
 }
 .cards-container {
   flex: 1;
@@ -22,5 +23,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding: 0 40px;
+  padding-left: 180px;
 }
+.fixed-qr-sidebar {
+  position: fixed;
+  left: 20px; /* المسافة من الحافة اليسرى للشاشة */
+  top: 50%; /* التوسيط الرأسي */
+  transform: translateY(-50%); /* ضبط التوسيط الرأسي بدقة */
+  z-index: 1000; /* لضمان ظهوره فوق كروت المطاعم أثناء السكرول */
+  pointer-events: auto; /* لتمكين التفاعل مع الكود */
+}
+
+/* لتجنب تداخل كروت المطاعم مع كارت الـ QR على الشاشات الكبيرة */
+@media (min-width: 1200px) {
+  .cards-container {
+    margin-left: 220px; /* دفع حاوية الكروت لليمين لترك مساحة مريحة للـ QR على اليسار */
+  }
+}
+

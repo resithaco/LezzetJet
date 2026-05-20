@@ -5,31 +5,51 @@ import { useCart } from "../CartContext/CartContext";
 
 export default function Basket() {
   const navigate = useNavigate();
-  // 1. استدعاء جميع المتغيرات والدوال التي استخدمتها في الأسفل
   const { cartItems, removeFromCart, addToCart, cartTotal } = useCart();
-
-  // تجنب الخطأ في حال كانت cartItems غير محملة بعد
   if (!cartItems) return null;
 
   return (
     <div style={{ margin: "40px 0" }}>
       {cartItems.length === 0 ? (
-        <>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            padding: "20px",
+            width: "100%",
+            boxSizing: "border-box",
+          }}
+        >
           <div style={{ fontSize: "50px", marginBottom: "15px" }}>🛍️</div>
           <h4
             style={{
               fontSize: "16px",
               fontWeight: "bold",
               color: "#2d2d2d",
-              margin: "0 0 5px 0",
+              margin: "0 0 10px 0",
+              lineHeight: "1.4",
             }}
           >
             Sepetiniz şu an boş görünüyor
           </h4>
-          <p style={{ fontSize: "13px", color: "#777", margin: 0 }}>
+          <p
+            style={{
+              fontSize: "13px",
+              color: "#777",
+              margin: 0,
+              maxWidth: "240px",
+              lineHeight: "1.5",
+              wordBreak:
+                "break-word" ,
+              whiteSpace: "normal",
+            }}
+          >
             Arzu ettiğiniz lezzetleri menüden seçip sepetinize ekleyebilirsiniz.
           </p>
-        </>
+        </div>
       ) : (
         <div style={{ textAlign: "left" }}>
           {cartItems.map((item, index) => (
@@ -86,13 +106,7 @@ export default function Basket() {
                 >
                   -
                 </button>
-                {/* 💡 تم إضافة color: "#2d2d2d" هنا لمنع اختفاء الرقم عند الهوفر */}
-                <span
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "14px",
-                  }}
-                >
+                <span style={{ fontWeight: "bold", fontSize: "14px" }}>
                   {item.quantity}
                 </span>
                 <button

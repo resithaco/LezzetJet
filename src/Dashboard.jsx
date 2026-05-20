@@ -3,6 +3,7 @@ import Navbar from "./navbar/Navbar";
 import CategoryMenu from "./CategoryMenu";
 import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import restaurantData from "./data.json";
+import QRCodeCard from "./QRCodeCard";
 import "./Dashboard.css";
 import "./RestaurantCard/cardStyle.css";
 
@@ -46,12 +47,8 @@ function Dashboard() {
 
   return (
     <div className="dashboard-layout">
-      {/* النافبار ثابت في الأعلى دائماً ولا يتأثر */}
       <Navbar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-
-      {/* حاوية المحتوى الرئيسي الذي يحتوي على السكرول */}
       <div className="cards-container">
-        {/* 💡 نقلنا الكاتيجوري إلى هنا ليكون في مقدمة السكرول وبكامل حجمه الطبيعي المريح */}
         <div className="dashboard-category-section">
           <CategoryMenu
             categories={categories}
@@ -59,14 +56,11 @@ function Dashboard() {
             onCategoryClick={handleCategoryClick}
           />
         </div>
-
-        {/* شبكة عرض كروت المطاعم */}
         <div className="restaurants-grid">
           {filteredRestaurants.map((restaurant) => (
             <RestaurantCard key={restaurant.id} data={restaurant} />
           ))}
         </div>
-
         {filteredRestaurants.length === 0 && (
           <div
             style={{
@@ -81,6 +75,9 @@ function Dashboard() {
             </p>
           </div>
         )}
+      </div>
+      <div className="fixed-qr-sidebar">
+        <QRCodeCard url={window.location.origin} url="https://resithaco.github.io/LezzetJet/"/>
       </div>
     </div>
   );
