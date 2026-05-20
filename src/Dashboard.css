@@ -34,18 +34,26 @@
   pointer-events: auto; /* لتمكين التفاعل مع الكود */
 }
 
-/* لتجنب تداخل كروت المطاعم مع كارت الـ QR على الشاشات الكبيرة */
-@media (min-width: 1200px) {
-  .cards-container {
-    margin-left: 0px; /* دفع حاوية الكروت لليمين لترك مساحة مريحة للـ QR على اليسار */
-  }
-}
+/* --- تعديل حاوية الشبكة الفوقية (Grid) للهاتف --- */
 @media (max-width: 768px) {
-  .restaurants-grid .restaurant-card {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    gap: 12px;
-    width: 100%;
+  .restaurants-grid {
+    padding-left: 0px !important;  /* إلغاء تباعد الـ 180px تماماً */
+    padding-right: 0px !important; 
+    gap: 12px !important;          /* مسافة صغيرة مريحة بين الكروت عمودياً */
+    width: 100% !important;
+    box-sizing: border-box;
     justify-content: center;
+  }
+  .restaurant-card {
+    width: 100% !important;        /* ملء عرض الشاشة بنسبة 100% */
+    max-width: 100% !important;    /* إلغاء الحد الأقصى 300px في الهاتف */
+    border-radius: 0px !important; /* حواف مستقيمة ليمتد من الحافة للحافة */
+    box-shadow: none !important;   /* اختياري: إزالة الظل الجانبي ليناسب الهواتف */
+  }
+
+  /* جعل الصورة تمتد أيضاً بشكل مستقيم بدون حواف دائرية في الهاتف */
+  .restaurant-card-image, 
+  .restaurant-card-image img {
+    border-radius: 0px !important;
   }
 }
