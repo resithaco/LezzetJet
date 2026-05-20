@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import mySiteLogo from "./assets/L-J.svg";
 
 export default function QRCodeCard({ url }) {
   const qrValue = url || window.location.origin;
+  
+  // 🌟 حالة لمعرفة ما إذا كانت الشاشة هاتف أم لا
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // 🌟 إذا كانت الشاشة هاتف، لا تقم برسم (Render) الكارد مطلقاً
+  if (isMobile) return null;
 
   return (
     <div style={styles.card}>
       <h3 style={styles.title}>Menüyü Tara</h3>
-
       <div style={styles.qrContainer}>
         <QRCodeSVG
           value={qrValue}
@@ -26,12 +40,10 @@ export default function QRCodeCard({ url }) {
           }}
         />
       </div>
-
       <p style={styles.footerText}>Lezzet Jet QR</p>
     </div>
   );
 }
-
 const styles = {
   card: {
     zIndex: 100000, /* 🌟 تم التصحيح إلى CamelCase وتحويلها لقيمة رقمية مباشرة */
