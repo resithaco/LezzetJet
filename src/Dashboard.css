@@ -38,9 +38,12 @@
 @media (max-width: 768px) {
   .restaurants-grid {
     padding-left: 0px !important;  /* إلغاء تباعد الـ 180px تماماً */
-    padding-right: 0px !important; 
+    padding-right: 5px !important; 
     gap: 12px !important;          /* مسافة صغيرة مريحة بين الكروت عمودياً */
     width: 100% !important;
+      box-shadow:
+    3px 3px 6px #bec3c9,
+    -3px -3px 6px #ffffff;
     box-sizing: border-box;
     justify-content: center;
   }
