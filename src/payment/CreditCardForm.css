@@ -12,25 +12,21 @@
   box-sizing: border-box;
   padding: 20px;
 }
-
 .card-3d-wrapper {
   perspective: 1000px;
   z-index: 2;
   margin-bottom: -110px;
 }
-
 .credit-card {
   width: 380px;
-  height: 240px; /* تعديل طفيف ليتوافق مع تناسب أبعاد الـ SVG */
+  height: 240px;
   transform-style: preserve-3d;
   transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
 }
-
 .credit-card.flipped {
   transform: rotateY(180deg);
 }
-
 .cc-front,
 .cc-back {
   width: 100%;
@@ -45,29 +41,22 @@
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
-
 .cc-back {
   transform: rotateY(180deg);
 }
-
-/* تمدد وسم الصورة المجلوبة من مجلد public بالكامل */
 .cc-svg-bg {
   width: 100%;
   height: 100%;
   object-fit: fill;
   display: block;
 }
-
-/* حاوية التموضع النصي المطلق فوق الصورة */
 .cc-text-overlay {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* لمنع حجب الأحداث */
+  pointer-events: none;
 }
-
-/* 🌟 تموضع عناصر الوجه الأمامي الديناميكية بدقة 🌟 */
 .dynamic-card-num {
   position: absolute;
   top: 58%;
@@ -78,7 +67,6 @@
   letter-spacing: 1.5px;
   color: #111;
 }
-
 .dynamic-valid-thru-label {
   position: absolute;
   top: 68%;
@@ -88,7 +76,6 @@
   font-weight: bold;
   color: #020202;
 }
-
 .dynamic-expiry {
   position: absolute;
   top: 74%;
@@ -98,7 +85,6 @@
   font-weight: bold;
   color: #111;
 }
-
 .dynamic-card-holder {
   position: absolute;
   top: 74%;
@@ -109,8 +95,6 @@
   letter-spacing: 1px;
   color: #111;
 }
-
-/* 🌟 تموضع عنصر رمز الأمان في الخلف 🌟 */
 .dynamic-cvv {
   position: absolute;
   top: 55%;
@@ -120,8 +104,6 @@
   font-weight: bold;
   color: #111;
 }
-
-/* تصميم الاستمارة (Form) */
 .card-form {
   text-align: center;
   background: white;
@@ -132,14 +114,12 @@
   max-width: 420px;
   box-sizing: border-box;
 }
-
 .cc-input-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   width: 100%; 
 }
-
 .cc-input-group label {
   font-size: 0.85rem;
   color: #4a5568;
@@ -147,7 +127,6 @@
   font-weight: 500;
   text-align: left;
 }
-
 .cc-input-group input,
 .cc-input-group select {
   padding: 12px 15px;
@@ -159,37 +138,30 @@
   width: 100%; 
   box-sizing: border-box; 
 }
-
 .cc-input-group input:focus,
 .cc-input-group select:focus {
   border-color: #ff4757;
 }
-
 .form-row {
   display: flex;
   width: 100%;
   gap: 15px;
 }
-
 .cc-select-group {
   display: flex;
   gap: 10px;
 }
-
 .cc-select-group select {
   width: 100%;
 }
-
 .expiration-group {
   flex: 2;
   min-width: 0; 
 }
-
 .cvv-group {
   flex: 1;
   min-width: 0; 
 }
-
 .submit-btn {
   width: 100%;
   padding: 14px;
@@ -203,11 +175,9 @@
   margin-top: 25px;
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
-
 .submit-btn:hover {
   background-color: #e43e4d;
 }
-
 .submit-btn:active {
   transform: scale(0.98);
 }

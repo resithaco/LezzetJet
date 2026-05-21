@@ -1,12 +1,10 @@
 import React from "react";
 import "./cardStyle.css";
 
-// 💡 التعديل هنا: قمنا بإضافة discount و deliveryTime لتتمكن الدالة من قراءتهما
 export default function CardImage({ image, discount, deliveryTime }) {
   return (
     <div className="restaurant-card-image" style={{ position: "relative" }}>
       <img src={image} alt="Restaurant" />
-
       {discount && (
         <div
           style={{
@@ -26,7 +24,6 @@ export default function CardImage({ image, discount, deliveryTime }) {
           {discount}
         </div>
       )}
-
       {deliveryTime && (
         <div
           style={{

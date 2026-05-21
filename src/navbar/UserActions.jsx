@@ -7,28 +7,18 @@ import { ShoppingBag } from "lucide-react";
 
 export default function UserActions() {
   const [isBasketOpen, setIsBasketOpen] = useState(false);
-  
-  // 1. إنشاء مرجع (Ref) لربطه بحاوية السلة
   const basketRef = useRef(null);
-
-  // 2. استخدام useEffect للاستماع لنقرات الماوس في الصفحة
   useEffect(() => {
     function handleClickOutside(event) {
-      // إذا كانت السلة مفتوحة، والنقرة حدثت خارج العنصر الذي يحمل المرجع (basketRef)
       if (basketRef.current && !basketRef.current.contains(event.target)) {
         setIsBasketOpen(false); // أغلق السلة
       }
     }
-
-    // إضافة مستمع الحدث عند فتح الصفحة
     document.addEventListener("mousedown", handleClickOutside);
-    
-    // تنظيف مستمع الحدث عند إغلاق المكون لتجنب مشاكل الذاكرة
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []); // مصفوفة فارغة تعني أن هذا التأثير يعمل مرة واحدة عند تحميل المكون
-
+  }, []);
   return (
     <div className="user-actions-container" style={{ display: "flex", gap: "20px", alignItems: "center" }}>
       <div className="action-item profile-icon">
@@ -40,10 +30,7 @@ export default function UserActions() {
       <div className="action-item favorites-icon">
         <FavoritesIcon />
       </div>
-      
-      {/* 3. ربط المرجع (basketRef) بالحاوية الرئيسية للسلة والأيقونة */}
       <div className="action-item basket-icon" style={{ position: "relative" }} ref={basketRef}>
-        
         <div 
           onClick={() => setIsBasketOpen(!isBasketOpen)}
           style={{ cursor: "pointer", display: "flex", alignItems: "center" }}

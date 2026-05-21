@@ -1,5 +1,6 @@
 import "./ProfileIcon.css";
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   User,
   ChevronDown,
@@ -12,7 +13,16 @@ import {
 } from "lucide-react";
 export default function ProfileIcon() {
   const [isOpen, setIsOpen] = useState(false);
+  const [userName, setUserName] = useState("Giriş Yap");
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const savedUser = localStorage.getItem("currentUser");
+    if (savedUser) {
+      const parsedUser = JSON.parse(savedUser);
+      setUserName(parsedUser.username.toUpperCase()); 
+    }
+  }, []);
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -24,16 +34,21 @@ export default function ProfileIcon() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
+  const handleLogout = () => {
+    localStorage.removeItem("currentUser");
+    navigate("/");
+  };
   return (
     <div className="profile-container" ref={dropdownRef}>
       <div className="profile-trigger" onClick={() => setIsOpen(!isOpen)}>
         <User size={20} />
-        <span className="profile-name">RAŞİT</span>
+        <span className="profile-name">{userName}</span>
         <ChevronDown
           size={16}
           className={`arrow-icon ${isOpen ? "rotate" : ""}`}
         />
       </div>
+      
       {isOpen && (
         <div className="dropdown-menu">
           <div className="menu-item">
@@ -52,7 +67,7 @@ export default function ProfileIcon() {
           <div className="menu-item">
             <HelpCircle size={18} /> <span>Yardım Merkezi</span>
           </div>
-          <div className="menu-item logout">
+          <div className="menu-item logout" onClick={handleLogout} style={{ cursor: "pointer" }}>
             <LogOut size={18} /> <span>Çıkış yap</span>
           </div>
         </div>

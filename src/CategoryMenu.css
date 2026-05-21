@@ -1,0 +1,52 @@
+.categories-container {
+  padding: 20px;
+}
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.categories-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+.clear-filter-btn {
+  background: none;
+  border: none;
+  color: #ff385c;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+.category-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+.category-row::-webkit-scrollbar {
+  height: 4px;
+}
+.category-row::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+.category-chip {
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #2d2d2d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.category-chip.active {
+  background-color: #ff385c;
+  color: #ffffff;
+  border-color: #ff385c;
+}

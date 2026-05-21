@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   background-color: #fcfcfc;
   box-sizing: border-box;
@@ -19,43 +20,50 @@
   background-color: #fcfcfc;
   padding: 10px 0;
 }
+.dashboard-grid {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start; 
+  gap: 24px;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .restaurants-grid {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   gap: 16px;
-  padding-left: 180px;
+  flex: 3;
 }
 .fixed-qr-sidebar {
-  position: fixed;
-  left: 20px; /* المسافة من الحافة اليسرى للشاشة */
-  top: 50%; /* التوسيط الرأسي */
-  transform: translateY(-50%); /* ضبط التوسيط الرأسي بدقة */
-  z-index: 1000; /* لضمان ظهوره فوق كروت المطاعم أثناء السكرول */
-  pointer-events: auto; /* لتمكين التفاعل مع الكود */
+flex: 1;
+  position: sticky; 
+  top: 20px; 
+  display: flex;
+  justify-content: center; 
+  pointer-events: auto;
 }
 
-/* --- تعديل حاوية الشبكة الفوقية (Grid) للهاتف --- */
 @media (max-width: 768px) {
   .restaurants-grid {
-    padding-left: 0px !important;  /* إلغاء تباعد الـ 180px تماماً */
-    padding-right: 5px !important; 
-    gap: 12px !important;          /* مسافة صغيرة مريحة بين الكروت عمودياً */
+    padding-left: 0px !important;
+    padding-right: 5px !important;
+    gap: 12px !important; 
     width: 100% !important;
-      box-shadow:
-    3px 3px 6px #bec3c9,
-    -3px -3px 6px #ffffff;
+    box-shadow:
+      3px 3px 6px #bec3c9,
+      -3px -3px 6px #ffffff;
     box-sizing: border-box;
     justify-content: center;
   }
   .restaurant-card {
-    width: 100% !important;        /* ملء عرض الشاشة بنسبة 100% */
-    max-width: 100% !important;    /* إلغاء الحد الأقصى 300px في الهاتف */
-    border-radius: 0px !important; /* حواف مستقيمة ليمتد من الحافة للحافة */
-    box-shadow: none !important;   /* اختياري: إزالة الظل الجانبي ليناسب الهواتف */
+    width: 100% !important;
+    max-width: 100% !important; 
+    border-radius: 0px !important; 
+    box-shadow: none !important; 
   }
-
-  /* جعل الصورة تمتد أيضاً بشكل مستقيم بدون حواف دائرية في الهاتف */
-  .restaurant-card-image, 
+  .restaurant-card-image,
   .restaurant-card-image img {
     border-radius: 0px !important;
   }

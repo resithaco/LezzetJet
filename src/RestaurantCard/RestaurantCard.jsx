@@ -5,11 +5,9 @@ import CardInfo from "./CardInfo";
 
 export default function RestaurantCard({ data }) {
   const navigate = useNavigate();
-
   const handleCardClick = () => {
     navigate(`/restaurant/${data.id}`, { state: { restaurant: data } });
   };
-
   return (
     <div
       className="restaurant-card"

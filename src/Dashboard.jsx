@@ -17,16 +17,12 @@ function Dashboard() {
     { key: "tatli", label: "Tatlı" },
     { key: "icecek", label: "İçecek" },
   ];
-
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-
   const allRestaurants = restaurantData.restaurants;
-
   const filteredRestaurants = allRestaurants.filter((res) => {
     const matchesCategory =
       activeCategory === "all" || res.category === activeCategory;
-
     const matchesSearch =
       res.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       (res.menu?.meals &&
@@ -37,14 +33,11 @@ function Dashboard() {
         res.menu.drinks.some((drink) =>
           drink.name.toLowerCase().includes(searchTerm.toLowerCase()),
         ));
-
     return matchesCategory && matchesSearch;
   });
-
   const handleCategoryClick = (categoryKey) => {
     setActiveCategory(categoryKey);
   };
-
   return (
     <div className="dashboard-layout">
       <Navbar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
@@ -56,10 +49,18 @@ function Dashboard() {
             onCategoryClick={handleCategoryClick}
           />
         </div>
-        <div className="restaurants-grid">
-          {filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.id} data={restaurant} />
-          ))}
+        <div className="dashboard-grid">
+          <div className="restaurants-grid">
+            {filteredRestaurants.map((restaurant) => (
+              <RestaurantCard key={restaurant.id} data={restaurant} />
+            ))}
+          </div>
+          <div className="fixed-qr-sidebar">
+            <QRCodeCard
+              url={window.location.origin}
+              url="https://resithaco.github.io/LezzetJet/"
+            />
+          </div>
         </div>
         {filteredRestaurants.length === 0 && (
           <div
@@ -75,9 +76,6 @@ function Dashboard() {
             </p>
           </div>
         )}
-      </div>
-      <div className="fixed-qr-sidebar">
-        <QRCodeCard url={window.location.origin} url="https://resithaco.github.io/LezzetJet/"/>
       </div>
     </div>
   );

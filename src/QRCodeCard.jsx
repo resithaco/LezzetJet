@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import mySiteLogo from "./assets/L-J.svg";
+import "./QRCodeCard.css";
 
 export default function QRCodeCard({ url }) {
   const qrValue = url || window.location.origin;
-  
-  // 🌟 حالة لمعرفة ما إذا كانت الشاشة هاتف أم لا
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  // 🌟 إذا كانت الشاشة هاتف، لا تقم برسم (Render) الكارد مطلقاً
   if (isMobile) return null;
-
   return (
-    <div style={styles.card}>
-      <h3 style={styles.title}>Menüyü Tara</h3>
-      <div style={styles.qrContainer}>
+    <div className="qr-card">
+      <h3 className="qr-card-title">Menüyü Tara</h3>
+      <div className="qr-code-container">
         <QRCodeSVG
           value={qrValue}
-          size={150} 
+          size={150}
           bgColor={"#ffffff"}
           fgColor={"#1f2937"}
           level={"H"}
@@ -40,43 +34,7 @@ export default function QRCodeCard({ url }) {
           }}
         />
       </div>
-      <p style={styles.footerText}>Lezzet Jet QR</p>
+      <p className="qr-card-footer">Lezzet Jet QR</p>
     </div>
   );
 }
-const styles = {
-  card: {
-    zIndex: 100000, /* 🌟 تم التصحيح إلى CamelCase وتحويلها لقيمة رقمية مباشرة */
-    fontFamily: "system-ui, -apple-system, sans-serif",
-    background: "#ffffff",
-    padding: "16px",
-    borderRadius: "12px",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
-    width: "180px", /* 🌟 تم توحيد العرض ليتناسق تماماً مع حجم الـ QR (150px) والـ Padding */
-    textAlign: "center",
-    border: "1px solid #f3f4f6",
-    direction: "rtl", 
-  },
-  title: {
-    fontSize: "14px",
-    fontWeight: "600",
-    color: "#111827",
-    marginBottom: "10px",
-    marginTop: "0",
-  },
-  qrContainer: {
-    background: "#f9fafb",
-    padding: "10px",
-    borderRadius: "8px",
-    display: "inline-flex",
-    justifyContent: "center",
-    alignItems: "center",
-    border: "1px solid #f3f4f6",
-  },
-  footerText: {
-    fontSize: "11px",
-    color: "#9ca3af",
-    marginTop: "8px",
-    marginBottom: "0",
-  },
-};

@@ -2,161 +2,56 @@ import React from "react";
 import { ShoppingBasket } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
+import "./Basket.css";
 
 export default function Basket() {
   const navigate = useNavigate();
   const { cartItems, removeFromCart, addToCart, cartTotal } = useCart();
   if (!cartItems) return null;
-
   return (
-    <div style={{ margin: "40px 0" }}>
+    <div className="basket-wrapper">
       {cartItems.length === 0 ? (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            padding: "20px",
-            width: "100%",
-            boxSizing: "border-box",
-          }}
-        >
-          <div style={{ fontSize: "50px", marginBottom: "15px" }}>🛍️</div>
-          <h4
-            style={{
-              fontSize: "16px",
-              fontWeight: "bold",
-              color: "#2d2d2d",
-              margin: "0 0 10px 0",
-              lineHeight: "1.4",
-            }}
-          >
-            Sepetiniz şu an boş görünüyor
-          </h4>
-          <p
-            style={{
-              fontSize: "13px",
-              color: "#777",
-              margin: 0,
-              maxWidth: "240px",
-              lineHeight: "1.5",
-              wordBreak:
-                "break-word" ,
-              whiteSpace: "normal",
-            }}
-          >
+        <div className="empty-basket-container">
+          <div className="empty-basket-icon">🛍️</div>
+          <h4 className="empty-basket-title">Sepetiniz şu an boş görünüyor</h4>
+          <p className="empty-basket-text">
             Arzu ettiğiniz lezzetleri menüden seçip sepetinize ekleyebilirsiniz.
           </p>
         </div>
       ) : (
-        <div style={{ textAlign: "left" }}>
-          {cartItems.map((item, index) => (
-            <div
-              key={item.id || index}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "15px",
-                borderBottom: "1px solid #eee",
-                paddingBottom: "10px",
-              }}
-            >
+        <div className="cart-items-container">
+          {cartItems.map((item) => (
+            <div key={item.id} className="cart-item-row">
               <div>
-                <div
-                  style={{
-                    fontWeight: "bold",
-                    color: "#2d2d2d",
-                    fontSize: "14px",
-                  }}
-                >
-                  {item.name}
-                </div>
-                <div
-                  style={{
-                    color: "#ff385c",
-                    fontSize: "13px",
-                    marginTop: "4px",
-                  }}
-                >
+                <div className="item-name">{item.name}</div>
+                <div className="item-total-price">
                   {(item.price * item.quantity).toFixed(2)} TL
                 </div>
               </div>
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "10px" }}
-              >
+              <div className="quantity-control-group">
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    borderRadius: "50%",
-                    border: "1px solid #ddd",
-                    backgroundColor: "#fff",
-                    color: "#2d2d2d",
-                    cursor: "pointer",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    padding: 0,
-                    lineHeight: 1,
-                  }}
+                  className="btn-decrease"
                 >
                   -
                 </button>
-                <span style={{ fontWeight: "bold", fontSize: "14px" }}>
-                  {item.quantity}
-                </span>
+                <span className="item-quantity-badge">{item.quantity}</span>
                 <button
                   onClick={() => addToCart(item, item.restaurantId)}
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    borderRadius: "50%",
-                    border: "1px solid #ff385c",
-                    backgroundColor: "#ff385c",
-                    color: "#fff",
-                    cursor: "pointer",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    padding: 0,
-                    lineHeight: 1,
-                  }}
+                  className="btn-increase"
                 >
                   +
                 </button>
               </div>
             </div>
           ))}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "20px",
-              fontSize: "16px",
-              fontWeight: "bold",
-              color: "#2d2d2d",
-            }}
-          >
+          <div className="cart-summary-total">
             <span>Toplam:</span>
             <span>{cartTotal ? cartTotal.toFixed(2) : "0.00"} TL</span>
           </div>
           <button
             onClick={() => navigate("/payment")}
-            style={{
-              width: "100%",
-              padding: "12px",
-              backgroundColor: "#ff385c",
-              color: "#fff",
-              border: "none",
-              borderRadius: "8px",
-              marginTop: "15px",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
+            className="checkout-submit-btn"
           >
             Sepeti Onayla
           </button>

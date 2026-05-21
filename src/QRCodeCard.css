@@ -1,0 +1,33 @@
+.qr-card {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 180px;
+  text-align: center;
+  border: 1px solid #f3f4f6;
+  direction: rtl;
+}
+.qr-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.qr-code-container {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f3f4f6;
+}
+.qr-card-footer {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 8px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,110 @@
+.basket-wrapper {
+  padding: 10px 0;
+}
+.empty-basket-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.empty-basket-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.empty-basket-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+.empty-basket-text {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  max-width: 240px;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: normal;
+}
+.cart-items-container {
+  text-align: left;
+}
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.item-name {
+  font-weight: bold;
+  color: #2d2d2d;
+  font-size: 14px;
+}
+.item-total-price {
+  color: #ff385c;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.quantity-control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-decrease {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #2d2d2d;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+.item-quantity-badge {
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn-increase {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ff385c;
+  background-color: #ff385c;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+.cart-summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+.checkout-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff385c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}

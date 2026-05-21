@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import cardFrontImg from "../assets/card-front.svg";
+import cardBackImg from "../assets/card-back.svg"
 import "./CreditCardForm.css";
 
 export default function CreditCardForm() {
@@ -8,8 +10,6 @@ export default function CreditCardForm() {
   const [expiryYear, setExpiryYear] = useState("Year");
   const [cvv, setCvv] = useState("");
   const [isFlipped, setIsFlipped] = useState(false);
-
-  // تنسيق رقم البطاقة للعرض في الطبقة العلوية
   const getDisplayCardNumber = () => {
     const rawNumbers = cardNumber.replace(/\s/g, ""); 
     let strokeStr = rawNumbers.padEnd(16, "");
@@ -19,14 +19,11 @@ export default function CreditCardForm() {
     let p4 = strokeStr.substring(12, 16);
     return `${p1} ${p2} ${p3} ${p4}`;
   };
-
-  // تنسيق تاريخ الانتهاء للعرض
   const getDisplayExpiry = () => {
     const m = expiryMonth === "Month" ? "MM" : expiryMonth;
     const y = expiryYear === "Year" ? "YY" : expiryYear.slice(-2);
     return `${m}/${y}`;
   };
-
   const handleCardNumberChange = (e) => {
     const numbersOnly = e.target.value.replace(/\D/g, "");
     let formattedValue = "";
@@ -40,7 +37,6 @@ export default function CreditCardForm() {
       setCardNumber(formattedValue);
     }
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!cardNumber || !cardHolder || !cvv || expiryMonth === "Month" || expiryYear === "Year") {
@@ -49,17 +45,12 @@ export default function CreditCardForm() {
     }
     alert("Ödeme başarıyla tamamlandı!");
   };
-
   return (
     <div className="payment-page-container">
       <div className="card-3d-wrapper">
         <div className={`credit-card ${isFlipped ? "flipped" : ""}`}>
-          
-          {/* الوجه الأمامي المسترد عبر وسم img */}
           <div className="cc-front">
-            <img src="/card-front.svg" alt="Card Front" className="cc-svg-bg" />
-            
-            {/* طبقة النصوص التفاعلية المتموضعة بدقة أعلى الصورة */}
+            <img src={cardFrontImg} alt="Card Front" className="cc-svg-bg" />
             <div className="cc-text-overlay">
               <div className="dynamic-card-num">{getDisplayCardNumber()}</div>
               <div className="dynamic-valid-thru-label">VALID THRU</div>
@@ -67,19 +58,14 @@ export default function CreditCardForm() {
               <div className="dynamic-card-holder">{cardHolder.toUpperCase() || "AD SOYAD"}</div>
             </div>
           </div>
-          {/* الوجه الخلفي المسترد عبر وسم img */}
           <div className="cc-back">
-            <img src="/card-back.svg" alt="Card Back" className="cc-svg-bg" />
-            
-            {/* طبقة رمز الأمن الخلفية */}
+            <img src={cardBackImg} alt="Card Back" className="cc-svg-bg" />
             <div className="cc-text-overlay">
               <div className="dynamic-cvv">{cvv || ""}</div>
             </div>
           </div>
-
         </div>
       </div>
-      {/* نموذج الإدخال */}
       <form className="card-form" onSubmit={handleSubmit}>
         <div className="cc-input-group">
           <input
@@ -112,7 +98,10 @@ export default function CreditCardForm() {
                 <option value="2026">2026</option>
                 <option value="2027">2027</option>
                 <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
                 <option value="2031">2031</option>
+                <option value="2032">2032</option>
                 <option value="2033">2033</option>
               </select>
             </div>
